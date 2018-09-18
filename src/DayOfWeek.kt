@@ -1,9 +1,9 @@
-import javafx.beans.binding.When
 import java.util.*
 
 fun askDayOfWeek()
 {
-    println("Would you kindly tell me what day of the week it is?")
+    //Bonus point for those who get the game reference :)
+    println("Would you kindly... tell me what day of the week it is?")
 }
 
 fun answerDayOfWeek()
@@ -25,6 +25,7 @@ fun answerDayOfWeek()
         else -> today = "houston, we have a problem!"
     }
 
+    //Using a string template to get the result
     println(" Of course, today is $today")
 }
 
