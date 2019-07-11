@@ -1,13 +1,11 @@
 import java.util.*
 
-fun askDayOfWeek()
-{
+fun askDayOfWeek() {
     //Bonus point for those who get the game reference :)
     println("Would you kindly... tell me what day of the week it is?")
 }
 
-fun answerDayOfWeek()
-{
+fun answerDayOfWeek() {
     //Declaring an immutable variable of the String type, which can be null
     val today: String?
 
@@ -29,8 +27,7 @@ fun answerDayOfWeek()
     println(" Of course, today is $today")
 }
 
-fun main(args: Array<String>)
-{
+fun main(args: Array<String>) {
     askDayOfWeek()
     answerDayOfWeek()
 }
