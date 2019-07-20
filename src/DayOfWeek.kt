@@ -1,5 +1,10 @@
 import java.util.*
 
+fun main() {
+    askDayOfWeek()
+    answerDayOfWeek()
+}
+
 fun askDayOfWeek() {
     //Bonus point for those who get the game reference :)
     println("Would you kindly... tell me what day of the week it is?")
@@ -27,8 +32,5 @@ fun answerDayOfWeek() {
     println(" Of course, today is $today")
 }
 
-fun main(args: Array<String>) {
-    askDayOfWeek()
-    answerDayOfWeek()
-}
+
 
