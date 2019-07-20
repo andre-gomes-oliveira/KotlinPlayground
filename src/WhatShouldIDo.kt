@@ -15,6 +15,7 @@ fun main() {
 
 fun whatShouldIDoToday(mood: String, weather: String = "sunny", temperature: Int = 24): String {
     // The when statement can act like a replacement for an if-else-if chain, pretty neat
+
     return when {
         isInGoodMood(mood) && isGoodWeather(weather) && isHotTemperature(temperature) -> "Time to hit the beach."
         !isInGoodMood(mood) && !isGoodWeather(weather) && !isWarmTemperature(temperature) -> "Stay in bed"
