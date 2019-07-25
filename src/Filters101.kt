@@ -15,7 +15,7 @@ fun main() {
     println("Sorted curries - alphabetically: " + spices.sorted().filter { it.contains("curry") })
 
     //Next step, get only the curries and sort by length
-    println("Sorted curries - lenght: " + spices.filter { it.contains("curry") }.sortedBy { it.length })
+    println("Sorted curries - length: " + spices.filter { it.contains("curry") }.sortedBy { it.length })
 
     //Next step, get only the spices that start with a c and end with an e
     println("Starts with a c and ends with and e: " + spices.filter { it.startsWith("c") }.filter { it.endsWith("e") })
