@@ -34,4 +34,21 @@ internal fun buildAquarium() {
 
     //Printing the volume in litters straight from an attribute
     println("Volume in litters (variable): ${myAquarium.volume}")
+
+    //Using named parameters and a constructor to create a small aquarium and print it's volume
+    val smallAquarium = Aquarium(length = 20, width = 15, height = 15)
+    println("Volume in litters (small Aquarium): ${smallAquarium.volume}")
+
+    /**
+     * Using the secondary constructor to build an aquarium
+     * This constructor will specify the values of it's parameters using the number of fishes provided
+     */
+    val aquariumWithFishes = Aquarium(fishCount = 15)
+    println("Volume in litters (with fishes): ${aquariumWithFishes.volume}")
+    println(
+        "Height: ${aquariumWithFishes.height} \n" +
+                "Width: ${aquariumWithFishes.width} \n" +
+                "Lenght: ${aquariumWithFishes.length} \n"
+    )
+
 }
