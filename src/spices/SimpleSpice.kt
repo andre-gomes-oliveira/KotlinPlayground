@@ -1,4 +1,4 @@
-package Spices
+package spices
 
 /**
  * A class that represents the spices used in earlier exercises

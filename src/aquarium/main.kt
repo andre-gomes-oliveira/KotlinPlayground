@@ -1,4 +1,4 @@
-package Aquarium
+package aquarium
 
 fun main() {
     buildAquarium()
@@ -7,16 +7,16 @@ fun main() {
 /**
  * Declaring an internal function to build an aquarium
  * Internal functions are only visible in the current package (similar to package-private in other Android projects)
- * In this case, the buildAquarium function can be accessed anywhere in the Aquarium package, but would not be exported in a lib
+ * In this case, the buildAquarium function can be accessed anywhere in the aquarium package, but would not be exported in a lib
  *
  */
 internal fun buildAquarium() {
-    /*Calling the Aquarium constructor
+    /*Calling the aquarium constructor
     * Note that there is no need to use the "new" keyword
      */
     val myAquarium = Aquarium()
 
-    /*Printing the values of the Aquarium attributes
+    /*Printing the values of the aquarium attributes
     * Even though it looks like the attributes are being accessed directly, Kotlin actually created the getters and setters
     */
     println(
@@ -37,7 +37,7 @@ internal fun buildAquarium() {
 
     //Using named parameters and a constructor to create a small aquarium and print it's volume
     val smallAquarium = Aquarium(length = 20, width = 15, height = 15)
-    println("Volume in litters (small Aquarium): ${smallAquarium.volume}")
+    println("Volume in litters (small aquarium): ${smallAquarium.volume}")
 
     /**
      * Using the secondary constructor to build an aquarium

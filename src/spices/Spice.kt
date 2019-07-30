@@ -1,6 +1,12 @@
-package Spices
+package spices
 
-class Spice(val name: String, val spiciness: String = "mild") {
+/**
+ *  Basic declaration of a class in Kotlin
+ *
+ * Using val so that the value of these attributes can be changed
+ * also declaring these attributes as private, so they can not be accessed by any other class
+ */
+class Spice(val name: String, private val spiciness: String = "mild") {
 
     /**
      * Using a heat variable similar to the one in SimpleSpice

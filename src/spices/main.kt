@@ -1,4 +1,4 @@
-package Spices
+package spices
 
 fun main() {
     tasteSpices()
@@ -22,6 +22,9 @@ fun tasteSpices() {
     )
 
     //Creating a list of "weak" spices
-    println(spices.filter { it.heat() <= 5 })
+    val mildSpices = spices.filter { it.heat() <= 5 }
+    mildSpices.forEach {
+        println("Mild spice name: ${it.name}")
+    }
 
 }

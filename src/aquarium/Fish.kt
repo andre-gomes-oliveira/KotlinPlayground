@@ -1,4 +1,4 @@
-package Aquarium
+package aquarium
 
 /**
  * Declaring an auxiliary class
