@@ -1,7 +1,9 @@
 package aquarium
 
 fun main() {
-    buildAquarium()
+    //buildAquarium()
+    //makeFishes()
+    delegate()
 }
 
 /**
@@ -50,5 +52,39 @@ internal fun buildAquarium() {
                 "Width: ${aquariumWithFishes.width} \n" +
                 "Lenght: ${aquariumWithFishes.length} \n"
     )
+}
 
+internal fun makeFishes() {
+    //Instantiating the concrete classes Shark and Plecostomus
+    val shark = Shark()
+    val plecostomos = Plecostomus()
+
+    //Checking if they are properly different
+    println("Shark color: ${shark.color} \nPlecostomus color: ${plecostomos.color}")
+    feedTheFish(shark)
+    feedTheFish(plecostomos)
+}
+
+/*
+ * Here we say that this function receives an object that implements an specific interface
+ * This is useful when we are only interested in using functions that were defined in an interface
+ * It looks just like it would if we were specifying the class type of the parameter, we are simply using an interface instead
+ *
+ */
+internal fun feedTheFish(fish: FishAction) {
+    //Using the interface function, the type of fish is irrelevant in this scenario
+    fish.eat()
+}
+
+/*
+ * In this function we will use multiple interfaces to declare everything a fish can do
+ */
+internal fun delegate() {
+    val comephorus = Comephorus()
+    println("Fish color: ${comephorus.color} \n")
+    comephorus.eat()
+
+    val mystery = MysteriousFish(GoldColor, "Munch, Munch!")
+    println("Fish color: ${mystery.color} \n")
+    mystery.eat()
 }
