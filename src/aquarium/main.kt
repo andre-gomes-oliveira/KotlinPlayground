@@ -1,8 +1,8 @@
 package aquarium
 
 fun main() {
-    //buildAquarium()
-    //makeFishes()
+    buildAquarium()
+    makeFishes()
     delegate()
 }
 
