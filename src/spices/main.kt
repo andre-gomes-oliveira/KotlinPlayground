@@ -27,4 +27,9 @@ fun tasteSpices() {
         println("Mild spice name: ${it.name}")
     }
 
+    //Creating a SpiceContainter and quickly printing out the lavels
+    spices.forEach {
+        val container: SpiceContainer = SpiceContainer(it)
+        println("Containter Label: ${container.label}")
+    }
 }

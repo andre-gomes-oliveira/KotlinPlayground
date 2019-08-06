@@ -1,6 +1,7 @@
 package ingredients
 
-abstract class Spice(
+//The abstract type became redundant once this class was declared as a sealed class
+sealed class Spice(
     val name: String, private val spiciness: String = "mild",
     color: SpiceColor
 ) :
@@ -27,5 +28,20 @@ abstract class Spice(
      */
     init {
         println("Name: $name \nSpiciness: $spiciness \nHeat:${heat()} \n")
+    }
+
+    /**
+     * Curry will be one of the possible concrete implementations of Spice
+     * Since there can be multiple types of curry, this class takes a name and appens "Curry" to it
+     * It also has a spiciness level that must be passed to it and a prepare function that grinds it
+     *
+     * Note: Since the Spice class became sealed, the Curry class had to be moved here
+     */
+    class Curry(curry: String, spiciness: String) :
+        Spice(name = "$curry Curry", spiciness = spiciness, color = YellowSpiceColor),
+        Grinder {
+        override fun prepareSpice() {
+            grind(name)
+        }
     }
 }

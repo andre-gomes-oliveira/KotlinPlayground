@@ -1,6 +1,6 @@
 package ingredients
 
 fun main() {
-    val curry = Curry("Bazinga", "OMG")
+    val curry = Spice.Curry("Bazinga", "OMG")
     println(curry.color)
 }
