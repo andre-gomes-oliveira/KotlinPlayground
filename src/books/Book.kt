@@ -1,9 +1,18 @@
 package books
 
+//Testing out constants by declaring a maximum number of books to be borrowed
+const val maxBookCount = 10
+
 /**
  * Simple class that represents a book, with a title and an author
  */
 open class Book(val title: String = "No title", val author: String = "Unknown", val year: Int) {
+
+    //Creating a companion object to hold constant values
+    companion object Constants {
+        const val BASE_URL = "https://www.somesafeurl.com/"
+    }
+
 
     //The last page the user has read, defaults to zero which the start of the book
     var currentPage: Int = 0
@@ -21,6 +30,16 @@ open class Book(val title: String = "No title", val author: String = "Unknown", 
     //Kotlin has a special type called a Triple, it is possible to group together 3 values like the book metadata
     open fun getMetadata(): Triple<String, String, Int> {
         return Triple(title, author, year)
+    }
+
+    //This function will tell weather another book can be borrowed
+    fun canBorrow(bookCount: Int): Boolean {
+        return bookCount.minus(maxBookCount) <= 0
+    }
+
+    //This function accesses both a constant value and a variable to print out the "URL" for the book
+    fun printURL() {
+        println("$BASE_URL$title.html")
     }
 }
 

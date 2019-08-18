@@ -25,4 +25,6 @@ fun main() {
     //Adding values bu using a helper function that checks if the key exists
     moreBooks.getOrPut("Homer") { setOf("The Odyssey") }
 
+    //Printing a book's URL
+    myBook.printURL()
 }
