@@ -27,4 +27,12 @@ fun main() {
 
     //Printing a book's URL
     myBook.printURL()
+
+    //A puppy will use extended functions to destroy a book
+    myBook.pages = 100
+    val littleMonster = Puppy()
+    while (myBook.weight > 0) {
+        littleMonster.playWithBook(myBook)
+        println("The current number of pages is ${myBook.pages}")
+    }
 }

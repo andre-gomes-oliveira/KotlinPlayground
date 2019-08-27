@@ -17,6 +17,9 @@ open class Book(val title: String = "No title", val author: String = "Unknown", 
     //The last page the user has read, defaults to zero which the start of the book
     var currentPage: Int = 0
 
+    // A variable that informs the number of pages in the book
+    var pages: Int = 0
+
     //A function that reads a page, simply increment currentPage by 1
     open fun readPage() {
         currentPage++
@@ -41,6 +44,24 @@ open class Book(val title: String = "No title", val author: String = "Unknown", 
     fun printURL() {
         println("$BASE_URL$title.html")
     }
+}
+
+/**
+ *  Book extensions
+ */
+
+//Extended variable, calculates the weight based on the number of pages
+val Book.weight: Double
+    get() {
+        return pages * 1.5
+    }
+
+//Extended function that torns down pages from the book
+fun Book.tornPages(pagesTorn: Int = 0) {
+    if (pages >= pagesTorn)
+        pages -= pagesTorn
+    else
+        pages = 0
 }
 
 /**
